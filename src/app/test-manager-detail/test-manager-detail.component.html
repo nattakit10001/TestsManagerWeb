@@ -1,0 +1,26 @@
+<form #form="ngForm" class="mt-2">
+    <div class="mb-3 d-flex align-items-center">
+        <label for="question" class="form-label col-2">คำถาม</label>
+        <input type="text" class="form-control" id="question" name="question" [(ngModel)]="model.question">
+    </div>
+    <div class="mb-3 d-flex align-items-center">
+        <label for="choice1" class="form-label col-2">คำตอบ 1</label>
+        <input type="text" class="form-control" id="choice1" name="choice1" [(ngModel)]="model.choice1">
+    </div>
+    <div class="mb-3 d-flex align-items-center">          
+        <label for="choice2" class="form-label col-2">คำตอบ 2</label>
+        <input type="text" class="form-control" id="choice2" name="choice2" [(ngModel)]="model.choice2">
+    </div>
+    <div class="mb-3 d-flex align-items-center">
+        <label for="choice3" class="form-label col-2">คำตอบ 3</label>
+        <input type="text" class="form-control" id="choice3" name="choice3" [(ngModel)]="model.choice3">
+    </div>
+    <div class="mb-3 d-flex align-items-center">
+        <label for="choice4" class="form-label col-2">คำตอบ 4</label>
+        <input type="text" class="form-control" id="choice4"  name="choice4" [(ngModel)]="model.choice4">
+    </div>
+    <div class="text-center">
+        <button (click)="onAdd()" class="btn btn-primary me-2">บันทึก</button>
+        <button (click)="onCancel()" class="btn btn-danger">ยกเลิก</button>
+    </div>
+</form>

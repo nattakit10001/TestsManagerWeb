@@ -1,0 +1,20 @@
+<div class="mb-4 mt-2">
+    <button class="btn btn-success" (click)="onAdd()">เพิ่มข้อสอบ</button>
+</div>
+
+<div *ngFor="let test of testManagerService.list; index as i" class="mb-4 test-item p-3">
+  <div class="question-row">
+    <span>{{i+1}}. {{test.question}}</span>
+    <button class="btn btn-danger" (click)="onDelete(test.id)">ลบ</button>
+  </div>
+  <div *ngFor="let choice of [test.choice1, test.choice2, test.choice3, test.choice4]">
+    <label>
+      <input
+        type="radio"
+        [name]="'question-' + i"
+        [value]="choice"
+      />
+      {{ choice }}
+    </label>
+  </div>
+</div>

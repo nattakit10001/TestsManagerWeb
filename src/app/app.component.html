@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" *ngIf="!showDetailFlag">
+    <div class="col-8 offset-2">
+      <app-test-manager-list (onAddEvent)="showDetailFlag = !showDetailFlag"></app-test-manager-list>
+    </div>
+  </div>
+  <div class="row" *ngIf="showDetailFlag">
+    <div class="col-8 offset-2">
+      <app-test-manager-detail (onCancelEvent)="showDetailFlag = !showDetailFlag"></app-test-manager-detail>
+    </div>
+  </div>
+</div>
